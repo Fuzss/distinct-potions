@@ -8,7 +8,6 @@ dependencies {
 
 multiloader {
     mixins {
-        mixin("MobEffectMixin", "PotionContentsMixin")
-        clientMixin("PotionItemMixin", "TippedArrowItemMixin")
+        clientMixin("MobEffectMixin", "PotionContentsMixin", "PotionItemMixin", "TippedArrowItemMixin")
     }
 }
