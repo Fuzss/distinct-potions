@@ -1,0 +1,61 @@
+{
+    "mod": {
+        "id": "distinctpotions",
+        "group": "fuzs.distinctpotions",
+        "name": "Distinct Potions",
+        "version": "21.11.0",
+        "authors": [
+            "Fuzs"
+        ],
+        "description": "Trouble telling your potions apart? Time to give you a helping hand with that.",
+        "license": "MPL-2.0"
+    },
+    "dependencies": [
+        {
+            "name": "fabricapi",
+            "type": "required",
+            "platforms": [
+                "fabric"
+            ]
+        },
+        {
+            "name": "forgeconfigapiport",
+            "type": "required",
+            "platforms": [
+                "fabric"
+            ]
+        },
+        {
+            "name": "puzzleslib",
+            "type": "required",
+            "platforms": [
+                "fabric",
+                "neoforge"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "name": "curseforge",
+            "slug": "distinguished-potions",
+            "id": "682565"
+        },
+        {
+            "name": "github",
+            "slug": "distinct-potions"
+        },
+        {
+            "name": "modrinth",
+            "slug": "distinguished-potions",
+            "id": "lX1xTFBZ"
+        }
+    ],
+    "environments": {
+        "client": "required",
+        "server": "unsupported"
+    },
+    "platforms": [
+        "fabric",
+        "neoforge"
+    ]
+}

@@ -5,7 +5,7 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "distinguishedpotions:item/potion_long",
+          "model": "distinctpotions:item/potion_long",
           "tints": [
             {
               "type": "minecraft:potion",
@@ -18,7 +18,7 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "distinguishedpotions:item/potion_strong",
+          "model": "distinctpotions:item/potion_strong",
           "tints": [
             {
               "type": "minecraft:potion",
@@ -39,6 +39,6 @@
         }
       ]
     },
-    "property": "distinguishedpotions:potion_type"
+    "property": "distinctpotions:potion_type"
   }
 }
