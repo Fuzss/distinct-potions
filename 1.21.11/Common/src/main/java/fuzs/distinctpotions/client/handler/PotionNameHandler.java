@@ -31,7 +31,8 @@ public class PotionNameHandler {
             return Component.translatable(STRONG_POTION_TRANSLATION_KEY, component);
         } else if (DistinctPotions.CONFIG.get(ClientConfig.class).longPotions.contains(potion)) {
             return Component.translatable(LONG_POTION_TRANSLATION_KEY, component);
-        } else if (!potion.getEffects().isEmpty()) {
+        } else if (!potion.getEffects().isEmpty()
+                && DistinctPotions.CONFIG.get(ClientConfig.class).standardPotions.contains(potion)) {
             return Component.translatable(STANDARD_POTION_TRANSLATION_KEY, component);
         } else {
             return component;

@@ -31,19 +31,28 @@ public class ClientConfig implements ConfigCore {
     @Config(description = "Highlights strong and long potions directly in the potion name on the item tooltip.")
     public boolean extendedPotionNames = true;
     @Config(name = "strong_potions", description = {
-            "Potion types to be recognized as strong potions for providing alternate item textures.",
+            "Potion types to be categorized as strong potions for providing alternate item names & textures.",
+            "This option applies before long & standard potions will be handled.",
             ConfigDataSet.CONFIG_DESCRIPTION
     })
     List<String> strongPotionsRaw = new ArrayList<>(Arrays.asList("*:strong_*", "*:*_strong"));
     @Config(name = "long_potions", description = {
-            "Potion types to be recognized as long potions for providing alternate item textures.",
+            "Potion types to be categorized as long potions for providing alternate item names & textures.",
+            "This option applies only after strong potions have been handled, but before standard potions will be.",
             ConfigDataSet.CONFIG_DESCRIPTION
     })
     List<String> longPotionsRaw = new ArrayList<>(Arrays.asList("*:long_*", "*:*_long"));
+    @Config(name = "standard_potions", description = {
+            "Potion types to be categorized as standard potions for providing alternate item names.",
+            "This option applies only after strong & long potions have been handled.",
+            ConfigDataSet.CONFIG_DESCRIPTION
+    })
+    List<String> standardPotionsRaw = new ArrayList<>(Arrays.asList("*:*"));
 
     public ConfigDataSet<MobEffect> mobEffectColorOverrides;
     public ConfigDataSet<Potion> strongPotions;
     public ConfigDataSet<Potion> longPotions;
+    public ConfigDataSet<Potion> standardPotions;
 
     @Override
     public void afterConfigReload() {
@@ -52,5 +61,6 @@ public class ClientConfig implements ConfigCore {
                 int.class);
         this.strongPotions = ConfigDataSet.from(Registries.POTION, this.strongPotionsRaw);
         this.longPotions = ConfigDataSet.from(Registries.POTION, this.longPotionsRaw);
+        this.standardPotions = ConfigDataSet.from(Registries.POTION, this.standardPotionsRaw);
     }
 }
