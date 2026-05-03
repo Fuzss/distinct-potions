@@ -1,11 +1,11 @@
-package fuzs.distinctpotions.data.client;
+package fuzs.distinctpotions.common.data.client;
 
-import fuzs.distinctpotions.DistinctPotions;
-import fuzs.distinctpotions.client.renderer.item.properties.conditional.PotionType;
-import fuzs.puzzleslib.api.client.data.v2.AbstractModelProvider;
-import fuzs.puzzleslib.api.client.data.v2.models.ItemModelGenerationHelper;
-import fuzs.puzzleslib.api.client.data.v2.models.ModelLocationHelper;
-import fuzs.puzzleslib.api.data.v2.core.DataProviderContext;
+import fuzs.distinctpotions.common.DistinctPotions;
+import fuzs.distinctpotions.common.client.renderer.item.properties.conditional.PotionType;
+import fuzs.puzzleslib.common.api.client.data.v2.AbstractModelProvider;
+import fuzs.puzzleslib.common.api.client.data.v2.models.ItemModelGenerationHelper;
+import fuzs.puzzleslib.common.api.client.data.v2.models.ModelLocationHelper;
+import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
 import net.minecraft.client.color.item.Potion;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ItemModelUtils;
@@ -50,7 +50,7 @@ public class ModModelProvider extends AbstractModelProvider {
         return ItemModelUtils.tintedModel(ItemModelGenerationHelper.createLayeredItemModel(operator.apply(
                         ModelLocationHelper.getItemModel(item)),
                 ModelLocationHelper.getItemTexture(operator.apply(DistinctPotions.id("potion_overlay"))),
-                operator.apply(ModelLocationHelper.getItemTexture(item)),
+                ModelLocationHelper.getItemTexture(operator.apply(ModelLocationHelper.getItemLocation(item))),
                 ModelTemplates.TWO_LAYERED_ITEM,
                 itemModelGenerators.modelOutput), new Potion());
     }

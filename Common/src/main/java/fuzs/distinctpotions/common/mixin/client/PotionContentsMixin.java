@@ -1,7 +1,7 @@
-package fuzs.distinctpotions.mixin.client;
+package fuzs.distinctpotions.common.mixin.client;
 
-import fuzs.distinctpotions.DistinctPotions;
-import fuzs.distinctpotions.config.ClientConfig;
+import fuzs.distinctpotions.common.DistinctPotions;
+import fuzs.distinctpotions.common.config.ClientConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.alchemy.Potion;
@@ -17,12 +17,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 abstract class PotionContentsMixin {
 
     @Inject(method = "getColorOr", at = @At("HEAD"), cancellable = true)
-    public void getColor(int defaultValue, CallbackInfoReturnable<Integer> callback) {
+    public void getColor(int defaultColor, CallbackInfoReturnable<Integer> callback) {
         if (!DistinctPotions.CONFIG.get(ClientConfig.class).distinctBasePotions) {
             return;
         }
 
-        if (defaultValue == PotionContents.BASE_POTION_COLOR) {
+        if (defaultColor == PotionContents.BASE_POTION_COLOR) {
             // Only checking for an empty effects list is not enough as it will also recolor water bottles.
             if (this.is(Potions.AWKWARD) || this.is(Potions.THICK) || this.is(Potions.MUNDANE)) {
                 DyeColor dyeColor = DistinctPotions.CONFIG.get(ClientConfig.class).basePotionsColor;

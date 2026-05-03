@@ -1,10 +1,10 @@
-package fuzs.distinctpotions.client.renderer.item.properties.conditional;
+package fuzs.distinctpotions.common.client.renderer.item.properties.conditional;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import fuzs.distinctpotions.DistinctPotions;
-import fuzs.distinctpotions.client.handler.PotionNameHandler;
-import fuzs.distinctpotions.config.ClientConfig;
+import fuzs.distinctpotions.common.DistinctPotions;
+import fuzs.distinctpotions.common.client.handler.PotionNameHandler;
+import fuzs.distinctpotions.common.config.ClientConfig;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty;
 import net.minecraft.util.StringRepresentable;

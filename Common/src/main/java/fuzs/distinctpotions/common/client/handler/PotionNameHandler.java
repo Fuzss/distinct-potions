@@ -1,7 +1,7 @@
-package fuzs.distinctpotions.client.handler;
+package fuzs.distinctpotions.common.client.handler;
 
-import fuzs.distinctpotions.DistinctPotions;
-import fuzs.distinctpotions.config.ClientConfig;
+import fuzs.distinctpotions.common.DistinctPotions;
+import fuzs.distinctpotions.common.config.ClientConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;

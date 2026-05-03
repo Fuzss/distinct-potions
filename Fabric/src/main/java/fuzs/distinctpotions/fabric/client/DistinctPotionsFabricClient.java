@@ -1,8 +1,8 @@
 package fuzs.distinctpotions.fabric.client;
 
-import fuzs.distinctpotions.DistinctPotions;
-import fuzs.distinctpotions.client.DistinctPotionsClient;
-import fuzs.puzzleslib.api.client.core.v1.ClientModConstructor;
+import fuzs.distinctpotions.common.DistinctPotions;
+import fuzs.distinctpotions.common.client.DistinctPotionsClient;
+import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
 import net.fabricmc.api.ClientModInitializer;
 
 public class DistinctPotionsFabricClient implements ClientModInitializer {

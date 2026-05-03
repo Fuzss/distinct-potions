@@ -1,18 +1,18 @@
-package fuzs.distinctpotions.mixin.client;
+package fuzs.distinctpotions.common.mixin.client;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import fuzs.distinctpotions.client.handler.PotionNameHandler;
+import fuzs.distinctpotions.common.client.handler.PotionNameHandler;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PotionItem;
+import net.minecraft.world.item.TippedArrowItem;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(PotionItem.class)
-abstract class PotionItemMixin extends Item {
+@Mixin(TippedArrowItem.class)
+abstract class TippedArrowItemMixin extends Item {
 
-    public PotionItemMixin(Properties properties) {
+    public TippedArrowItemMixin(Properties properties) {
         super(properties);
     }
 
