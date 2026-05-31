@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "distinctpotions:item/potion_overlay_greater",
+    "layer1": "distinctpotions:item/lingering_potion_greater"
+  }
+}

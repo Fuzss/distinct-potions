@@ -24,15 +24,15 @@ public record PotionType() implements SelectItemModelProperty<PotionType.Type> {
 
     @Override
     public Type get(ItemStack itemStack, @Nullable ClientLevel clientLevel, @Nullable LivingEntity livingEntity, int seed, ItemDisplayContext itemDisplayContext) {
-        if (!DistinctPotions.CONFIG.get(ClientConfig.class).dedicatedPotionBottles) {
+        if (!DistinctPotions.CONFIG.get(ClientConfig.class).uniquePotionBottles) {
             return Type.STANDARD;
         }
 
         Potion potion = PotionNameHandler.getNullablePotion(itemStack);
         if (potion != null) {
-            if (DistinctPotions.CONFIG.get(ClientConfig.class).strongPotions.contains(potion)) {
+            if (DistinctPotions.CONFIG.get(ClientConfig.class).greaterPotions.contains(potion)) {
                 return Type.STRONG;
-            } else if (DistinctPotions.CONFIG.get(ClientConfig.class).longPotions.contains(potion)) {
+            } else if (DistinctPotions.CONFIG.get(ClientConfig.class).extendedPotions.contains(potion)) {
                 return Type.LONG;
             }
         }

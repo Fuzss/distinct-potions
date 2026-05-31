@@ -1,5 +1,5 @@
 {
-  "item.distinctpotions.potion.long": "Extended %s",
-  "item.distinctpotions.potion.standard": "Lesser %s",
-  "item.distinctpotions.potion.strong": "Greater %s"
+  "item.distinctpotions.potion.extended": "Extended %s",
+  "item.distinctpotions.potion.greater": "Greater %s",
+  "item.distinctpotions.potion.lesser": "Lesser %s"
 }

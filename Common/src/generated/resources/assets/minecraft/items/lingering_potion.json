@@ -5,7 +5,7 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "distinctpotions:item/lingering_potion_long",
+          "model": "distinctpotions:item/lingering_potion_extended",
           "tints": [
             {
               "type": "minecraft:potion",
@@ -18,7 +18,7 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "distinctpotions:item/lingering_potion_strong",
+          "model": "distinctpotions:item/lingering_potion_greater",
           "tints": [
             {
               "type": "minecraft:potion",

@@ -34,10 +34,10 @@ public class ModModelProvider extends AbstractModelProvider {
         ItemModel.Unbaked standardModel = ItemModelUtils.tintedModel(ModelLocationHelper.getItemModel(item),
                 new Potion());
         ItemModel.Unbaked longModel = this.createPotionType(item, (Identifier identifier) -> {
-            return DistinctPotions.id(identifier.getPath()).withSuffix("_long");
+            return DistinctPotions.id(identifier.getPath()).withSuffix("_extended");
         }, itemModelGenerators);
         ItemModel.Unbaked strongModel = this.createPotionType(item, (Identifier identifier) -> {
-            return DistinctPotions.id(identifier.getPath()).withSuffix("_strong");
+            return DistinctPotions.id(identifier.getPath()).withSuffix("_greater");
         }, itemModelGenerators);
         itemModelGenerators.itemModelOutput.accept(item,
                 ItemModelUtils.select(new PotionType(),

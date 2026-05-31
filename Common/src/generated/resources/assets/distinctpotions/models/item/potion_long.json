@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "distinctpotions:item/potion_overlay_long",
-    "layer1": "distinctpotions:item/potion_long"
-  }
-}
