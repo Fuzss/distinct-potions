@@ -20,7 +20,7 @@ public class ClientConfig implements ConfigCore {
     public boolean distinctBasePotions = true;
     @Config(description = "The color given to base potions (awkward, mundane and thick).")
     public DyeColor basePotionsColor = DyeColor.BROWN;
-    @Config(name = "mob_effect_colors_overrides", description = {
+    @Config(name = "mob_effect_color_overrides", description = {
             "Custom color overrides for mob effects, allows for restoring effect colors from previous Minecraft versions.",
             "Format for every entry is \"<namespace>:<path>,<rgbcolor>\". Tags are supported, must be in the format of \"#<namespace>:<path>,<rgbcolor>\". Namespace may be omitted to use \"minecraft\" by default. May use asterisk as wildcard parameter via pattern matching, e.g. \"minecraft:*_shulker_box\" to match all shulker boxes no matter of color."
     })
