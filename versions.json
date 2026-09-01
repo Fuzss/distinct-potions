@@ -6,11 +6,17 @@
     "26.1.x": "maintained",
     "26.2.x": "primary"
   },
-  "properties": {
-    "distributions.curseforge.id": "682565",
-    "distributions.curseforge.slug": "distinguished-potions",
-    "distributions.github.slug": "distinct-potions",
-    "distributions.modrinth.id": "lX1xTFBZ",
-    "distributions.modrinth.slug": "distinguished-potions"
+  "distributions": {
+    "curseforge": {
+      "id": "682565",
+      "slug": "distinguished-potions"
+    },
+    "github": {
+      "slug": "distinct-potions"
+    },
+    "modrinth": {
+      "id": "lX1xTFBZ",
+      "slug": "distinguished-potions"
+    }
   }
 }
