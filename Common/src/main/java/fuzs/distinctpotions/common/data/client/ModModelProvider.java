@@ -2,10 +2,10 @@ package fuzs.distinctpotions.common.data.client;
 
 import fuzs.distinctpotions.common.DistinctPotions;
 import fuzs.distinctpotions.common.client.renderer.item.properties.conditional.PotionType;
-import fuzs.puzzleslib.common.api.client.data.v2.AbstractModelProvider;
-import fuzs.puzzleslib.common.api.client.data.v2.models.ItemModelGenerationHelper;
-import fuzs.puzzleslib.common.api.client.data.v2.models.ModelLocationHelper;
-import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.puzzleslib.common.api.client.data.v3.models.AbstractModelProvider;
+import fuzs.puzzleslib.common.api.client.data.v3.models.ItemModelGenerationHelper;
+import fuzs.puzzleslib.common.api.client.data.v3.models.ModelLocationHelper;
+import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
 import net.minecraft.client.color.item.Potion;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ItemModelUtils;

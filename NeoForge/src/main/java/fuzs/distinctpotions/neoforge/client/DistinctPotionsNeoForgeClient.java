@@ -5,7 +5,7 @@ import fuzs.distinctpotions.common.client.DistinctPotionsClient;
 import fuzs.distinctpotions.common.data.client.ModLanguageProvider;
 import fuzs.distinctpotions.common.data.client.ModModelProvider;
 import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
-import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
+import fuzs.puzzleslib.neoforge.api.data.v3.core.DataProviderBuilder;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.Mod;
 
@@ -14,8 +14,7 @@ public class DistinctPotionsNeoForgeClient {
 
     public DistinctPotionsNeoForgeClient() {
         ClientModConstructor.construct(DistinctPotions.MOD_ID, DistinctPotionsClient::new);
-        DataProviderHelper.registerDataProviders(DistinctPotions.MOD_ID,
-                ModLanguageProvider::new,
-                ModModelProvider::new);
+        DataProviderBuilder.of(DistinctPotions.MOD_ID)
+                .addProvider(ModLanguageProvider::new, ModModelProvider::new);
     }
 }
